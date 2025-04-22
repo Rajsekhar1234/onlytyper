@@ -180,3 +180,30 @@ function clearHistory() {
 function toggleDarkMode() {
   document.body.classList.toggle('dark-mode');
 }
+// Disable right-click with alert
+document.addEventListener('contextmenu', function (e) {
+  e.preventDefault();
+  alert("Right-click is disabled on this site.");
+});
+
+// Disable text selection with alert
+document.addEventListener('selectstart', function (e) {
+  e.preventDefault();
+  alert("Text selection is disabled on this site.");
+});
+
+// Disable developer tools and other shortcuts with alert
+document.addEventListener('keydown', function (e) {
+  if (
+    (e.ctrlKey && e.key === 'u') ||                 // Ctrl+U
+    (e.ctrlKey && e.shiftKey && e.key === 'I') ||   // Ctrl+Shift+I
+    (e.ctrlKey && e.shiftKey && e.key === 'J') ||   // Ctrl+Shift+J
+    (e.ctrlKey && e.key === 's') ||                 // Ctrl+S
+    (e.ctrlKey && e.key === 'c') ||                 // Ctrl+C
+    (e.key === 'F12')                               // F12
+  ) {
+    e.preventDefault();
+    alert("This action is disabled on this site.");
+  }
+});
+
