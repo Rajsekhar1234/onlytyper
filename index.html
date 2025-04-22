@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Typing Test</title>
+  <link rel="icon" type="image/png" href="image/favicon.png">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <img src="image/favicon.png" alt="Logo" class="logo" />
+    <h1>Typing Test Platform</h1>
+  </header>
+
+  <main>
+    <div id="modeButtons">
+      <button onclick="startInfiniteMode()">Infinite Sentence Mode</button>
+      <button onclick="startPassageMode()">2000-Word Passage Mode</button>
+    </div>
+
+    <div id="controls"></div>
+    <div id="timerDisplay"></div>
+
+    <div id="testBoxContainer">
+      <div id="testBox"></div>
+      <textarea id="inputArea" placeholder="Start typing here..." disabled></textarea>
+    </div>
+
+    <div id="stats"></div>
+    <canvas id="statsChart"></canvas>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
