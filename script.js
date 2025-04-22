@@ -16,6 +16,7 @@ async function startPassageMode() {
   passageText = getRandomPassage(data);
   currentWords = passageText.split(' ');
   showControls('passage');
+  showControls('timer');
   renderTestBox(passageText);
   startTypingTest(900);
 }
