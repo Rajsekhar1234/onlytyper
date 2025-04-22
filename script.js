@@ -24,12 +24,8 @@ function showControls(type) {
   document.getElementById('controls').innerHTML = type === 'timer'
     ? `<label>Duration (minutes): <input id="duration" type="number" min="1" value="1" /></label>
        <button onclick="startTypingTestFromInput()">Start</button>
-       <button onclick="viewHistory()">🏆 View History</button>
-       <button onclick="clearHistory()">🗑 Clear History</button>
        <button onclick="toggleDarkMode()">🌓 Toggle Dark Mode</button>`
-    : `<button onclick="viewHistory()">🏆 View History</button>
-       <button onclick="clearHistory()">🗑 Clear History</button>
-       <button onclick="toggleDarkMode()">🌓 Toggle Dark Mode</button>`;
+    : `<button onclick="toggleDarkMode()">🌓 Toggle Dark Mode</button>`;
 }
 
 function renderTestBox(text) {
